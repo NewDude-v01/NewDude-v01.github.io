@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT Professional | Portfolio & CV</title>
+  <title>IT Graduate Portfolio & CV</title>
   <style>
     :root {
       --bg-main: #0a0f1d;
@@ -29,7 +29,6 @@
       padding-bottom: 80px;
     }
 
-    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: space-between;
@@ -47,7 +46,6 @@
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--accent);
-      letter-spacing: -0.5px;
     }
 
     .nav-links {
@@ -66,17 +64,14 @@
       color: var(--accent);
     }
 
-    /* CONTAINER */
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    /* HERO SECTION */
     .hero {
       padding: 4rem 0 2rem;
-      text-align: left;
     }
 
     .badge {
@@ -105,11 +100,6 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-    }
-
     .btn {
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
@@ -117,29 +107,15 @@
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: all 0.2s;
-    }
-
-    .btn-primary {
+      display: inline-block;
       background: var(--accent);
       color: var(--bg-main);
     }
 
-    .btn-primary:hover {
+    .btn:hover {
       background: var(--accent-hover);
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--text-muted);
-    }
-
-    /* SECTIONS */
     section {
       padding: 3rem 0;
       border-bottom: 1px solid var(--border-color);
@@ -149,12 +125,8 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
-    /* SKILLS TAGS */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -167,10 +139,8 @@
       padding: 0.5rem 1rem;
       border-radius: 6px;
       font-size: 0.9rem;
-      color: var(--text-main);
     }
 
-    /* CV / TIMELINE */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -192,7 +162,6 @@
 
     .timeline-role {
       font-weight: 700;
-      color: var(--text-main);
     }
 
     .timeline-date {
@@ -206,213 +175,63 @@
       margin-bottom: 0.5rem;
     }
 
-    /* SECRET ADMIN MODAL */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      width: 90%;
-      max-width: 500px;
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .modal-card h3 {
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
-    }
-
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 0.5rem;
-      background: var(--bg-main);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      border-radius: 4px;
+    @media print {
+      nav, .btn { display: none !important; }
+      body { background: #fff; color: #000; }
+      .timeline-item, .skill-tag { border: 1px solid #ccc; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="brand" id="brand-logo">Dev.Portfolio</div>
+    <div class="brand">NewDude.dev</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#cv">CV / Experience</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#cv">CV</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <section class="hero" id="about">
       <span class="badge">Open for IT Opportunities</span>
-      <h1 id="cv-name">Alex Mercer</h1>
-      <h2 id="cv-title">Information Technology Graduate | Systems & Web Developer</h2>
-      <p id="cv-bio" style="color: var(--text-muted); margin-bottom: 1.5rem;">
-        Resourceful IT graduate with strong technical foundations in web engineering, network troubleshooting, and database design. Experienced in building full-stack applications and managing IT infrastructure.
+      <h1>Your Name Here</h1>
+      <h2>Information Technology Graduate | Web & Systems Developer</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Passionate BSIT graduate with hands-on experience in web application development, database management, and network configuration.
       </p>
-      <div class="hero-actions">
-        <button class="btn btn-primary" onclick="window.print()">Print / Download CV</button>
-        <a href="#cv" class="btn btn-outline">View Experience</a>
-      </div>
+      <button class="btn" onclick="window.print()">Print / Save CV</button>
     </section>
 
     <section id="skills">
-      <div class="section-header">Technical Competencies</div>
+      <div class="section-header">Technical Skills</div>
       <div class="skills-grid">
         <span class="skill-tag">JavaScript (ES6+)</span>
         <span class="skill-tag">HTML5 & CSS3</span>
-        <span class="skill-tag">SQL / MySQL</span>
-        <span class="skill-tag">Git & Version Control</span>
-        <span class="skill-tag">Networking Fundamentals</span>
-        <span class="skill-tag">System Administration</span>
+        <span class="skill-tag">MySQL / Databases</span>
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">Networking Basics</span>
+        <span class="skill-tag">Hardware Diagnostics</span>
       </div>
     </section>
 
     <section id="cv">
       <div class="section-header">Curriculum Vitae</div>
       <div class="timeline">
-        
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-role">Bachelor of Science in Information Technology</span>
             <span class="timeline-date">Graduated 2026</span>
           </div>
-          <div class="timeline-org">University / Institute</div>
+          <div class="timeline-org">Your College / University Name</div>
           <p style="color: var(--text-muted); font-size: 0.95rem;">
-            Focused on Software Engineering, Database Systems, Web Development, and Computer Networks. Completed Capstone Project on web inventory management.
+            Completed coursework in Systems Analysis, Database Management, Data Structures, and Web Development.
           </p>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-role" id="exp-role">IT Intern / Support Specialist</span>
-            <span class="timeline-date">2025</span>
-          </div>
-          <div class="timeline-org" id="exp-company">Tech Solutions Inc.</div>
-          <p id="exp-desc" style="color: var(--text-muted); font-size: 0.95rem;">
-            Assisted with hardware/software diagnostics, network configuration, database backups, and internal website maintenance.
-          </p>
-        </div>
-
       </div>
     </section>
   </div>
 
-  <div class="modal-overlay" id="adminModal">
-    <div class="modal-card">
-      <h3>Admin Panel (Hidden Editor)</h3>
-      <form id="adminForm">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" id="input-name" />
-        </div>
-        <div class="form-group">
-          <label>Professional Title</label>
-          <input type="text" id="input-title" />
-        </div>
-        <div class="form-group">
-          <label>Bio Summary</label>
-          <textarea id="input-bio" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <label>Internship Role</label>
-          <input type="text" id="input-role" />
-        </div>
-        <div class="form-group">
-          <label>Company Name</label>
-          <input type="text" id="input-company" />
-        </div>
-        <div style="display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem;">
-          <button type="button" class="btn btn-outline" onclick="closeAdmin()">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Changes</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const DEFAULT_PIN = "1234";
-
-    const defaultState = {
-      name: "Alex Mercer",
-      title: "Information Technology Graduate | Systems & Web Developer",
-      bio: "Resourceful IT graduate with strong technical foundations in web engineering, network troubleshooting, and database design. Experienced in building full-stack applications and managing IT infrastructure.",
-      role: "IT Intern / Support Specialist",
-      company: "Tech Solutions Inc."
-    };
-
-    function loadPortfolioData() {
-      const data = JSON.parse(localStorage.getItem('it_portfolio_data')) || defaultState;
-      
-      document.getElementById('cv-name').innerText = data.name;
-      document.getElementById('cv-title').innerText = data.title;
-      document.getElementById('cv-bio').innerText = data.bio;
-      document.getElementById('exp-role').innerText = data.role;
-      document.getElementById('exp-company').innerText = data.company;
-      document.getElementById('brand-logo').innerText = data.name.split(' ')[0] + '.dev';
-
-      // Prefill admin fields
-      document.getElementById('input-name').value = data.name;
-      document.getElementById('input-title').value = data.title;
-      document.getElementById('input-bio').value = data.bio;
-      document.getElementById('input-role').value = data.role;
-      document.getElementById('input-company').value = data.company;
-    }
-
-    // Secret Key Listener (Ctrl + Shift + A)
-    window.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') {
-        e.preventDefault();
-        const pin = prompt("Enter Admin Security PIN:");
-        if (pin === DEFAULT_PIN) {
-          document.getElementById('adminModal').style.display = 'flex';
-        } else if (pin !== null) {
-          alert("Unauthorized access attempt.");
-        }
-      }
-    });
-
-    function closeAdmin() {
-      document.getElementById('adminModal').style.display = 'none';
-    }
-
-    document.getElementById('adminForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const updatedState = {
-        name: document.getElementById('input-name').value,
-        title: document.getElementById('input-title').value,
-        bio: document.getElementById('input-bio').value,
-        role: document.getElementById('input-role').value,
-        company: document.getElementById('input-company').value
-      };
-      
-      localStorage.setItem('it_portfolio_data', JSON.stringify(updatedState));
-      loadPortfolioData();
-      closeAdmin();
-    });
-
-    window.onload = loadPortfolioData;
-  </script>
 </body>
 </html>
